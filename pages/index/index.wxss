@@ -1,0 +1,52 @@
+swiper{
+  width: 750rpx;
+  height: 375rpx;
+  border-top: 10px dotted orange;
+  border-bottom: 10px dotted orange;
+}
+swiper image{
+  width: 750rpx;
+  height: 375rpx;
+}
+
+.scrollView-x{
+  white-space: nowrap; 
+  display: flex;
+  background:  purple;
+}
+.scrollView-x view{
+  width: 200rpx; 
+  height: 50rpx; 
+  display: inline-block;
+  text-align: center;
+  border-right: 1px solid red;
+}
+.scrollView-x view:last-child{
+  border-right: none;
+}
+
+.inputView{
+  border:  2px solid red;
+  border-radius: 5px;
+  margin: 0 100rpx;
+  margin-top: 15px;
+}
+.inputView .input{
+  padding-left: 10px;
+}
+
+.picker>picker{
+	border: 1px solid #000;
+}
+
+
+.row-wrap{
+  line-height: 88rpx;
+  display: flex;
+}
+.row-wrap picker {
+  margin-right: 20rpx;
+}
+.hui{
+  color: #777;
+}

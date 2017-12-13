@@ -1,0 +1,64 @@
+<view class="container">
+
+  <view class="tab_wrap">
+    <view class="tab_item {{showVisited ? 'active':''}}" bindtap="toMyVisited">我看过的</view>
+    <view class="tab_item {{showColected ? 'active':''}}" bindtap="toMyCollected">我收藏的</view>
+  </view>
+
+  <view class="noempty_wrap" wx:if="{{showVisited && visitHistory}}">
+    <view class="item_wrap">
+      <block >
+        <view class="item" wx:for="{{visitHistory}}" wx:key="cardListId">
+          <view class="item_letter">{{item.classify}}</view>
+          <view class="item_deg2" wx:for="{{item.children}}" wx:for-item="item" wx:key="cardId" >
+            <image src="{{item.avatar?item.avatar:'/images/kong@2x.png'}}" class="head_img"></image>
+            <view class="item_content" id="">
+              <view class="company">{{item.companyName}}</view>
+              <view class="time">{{item.time}}</view>
+            </view>
+            <image src="/images/call.png" wx:if="{{item.mobile}}" class="call_img" bindtap="makePhoneCall" data-mobile="{{item.mobile}}"></image>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+
+  <view class="noempty_wrap" wx:if="{{showColected && colectedHistory}}">
+    <view class="item_wrap item_wrapSet" >
+      <block>
+        <view class="item itemSet" bindtap='redirect2Store' wx:for="{{colectedHistory}}" wx:for-item="item" wx:key="">
+          <image src="{{item.avatar?item.avatar:'/images/kong@2x.png'}}" class="head_img"></image>
+          <view class="right">
+            <view class="item_flex">
+              <view class="company">{{item.companyName}}</view>
+            </view>
+            <view class="item_flex">
+                <view class="identify_state">
+                  <image src="/images/icon_person@2x.png" wx:if="{{item.is_certified==1}}"></image>
+                  <image src="/images/icon_company@2x.png" wx:elif="{{item.is_certified==2}}"></image>
+                  <image src="/images/icon_unverified@2x.png" wx:else></image>
+                  <text>供货商</text>
+                </view>
+                <view class="up_num">{{item.up_num}}</view>
+            </view>
+            <view class="item_flex">
+              <view class="owner">{{item.owner}}</view>
+              <view class="up_title">上架货品</view>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+
+  <view class="void_wrap" wx:if="{{showVisited &&!visitHistory}}">
+    <image src="/images/shop@2x.png"></image>
+    <p>暂无浏览记录</p>
+  </view>
+
+  <view class="void_wrap" wx:if="{{showColected && !colectedHistory}}">
+    <image src="/images/no_collected.png"></image>
+    <p>暂无收藏记录</p>
+  </view>
+
+</view>

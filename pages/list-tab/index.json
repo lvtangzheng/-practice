@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "TAB列表",
+	"backgroundTextStyle": "light",
+	"navigationBarBackgroundColor": "#fefefe",
+	"navigationBarTextStyle": "black",
+	"enablePullDownRefresh": true
+}

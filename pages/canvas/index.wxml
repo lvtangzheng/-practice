@@ -1,0 +1,6 @@
+<view classs="container">
+	<canvas canvas-id="myCanvas" bindtouchstart="start" bindtouchmove="move" bindtouchend="end"/>
+  <view hidden="{{hidden}}">
+    Coordinates: ({{x}}, {{y}})
+  </view>
+</view>

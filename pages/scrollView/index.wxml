@@ -1,0 +1,101 @@
+<scroll-view scroll-y="true" style="height: 100vh;" scroll-top="{{scrollTop}}" bindscroll="scroll" scroll-top="{{scrollY}}">
+<view>
+	<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+		<block wx:for="{{imgUrls}}" wx:key="">
+			<swiper-item>
+				<navigator url="{{item.link}}" hover-class="navigator-hover">
+					<image src="{{item.url}}" class="slide-image" width="355" height="155"/>
+				</navigator>
+			</swiper-item>
+		</block>
+	</swiper>
+	
+
+
+	<view class="tab_wrap {{scrollTop>130 ? 'topnav' : ''}}">
+		<view class="tab_item {{!tabStatus ? 'active':''}}" bindtap="tabToAll">全部货品</view>
+		<view class="tab_item {{tabStatus ? 'active':''}}" bindtap="tabToNew">最新上架</view>
+	</view>
+	<!-- 空div，使悬浮tab过渡时页面不至于闪动 -->
+	<view class="tab_wrap {{scrollTop>130 ? 'show' : 'hide'}}">
+		<view style="width: 100%;height: 80rpx;"></view>
+	</view>
+
+<!-- 全部货品 -->
+	
+	<view class="item_wrap" wx:if="{{allSKU&&tabStatus==0}}">
+		<block wx:for="{{allSKU}}" wx:key="sku">
+			<view class="item" data-goodsid="{{item.id}}">
+				<image class="recommend" src="/images/recommend.png" wx:if="{{item.if_commend}}"></image>
+				<view class="item_flex">
+					<view class="item_left">
+						<view class="title">{{item.name}} {{item.craft}} {{item.branch}} </view>
+					</view>
+					<view class="item_right">
+						<view class="date">{{item.update_time}}</view>
+					</view>
+				</view>
+
+				<view class="item_flex">
+					<view class="item_left">
+						<view class="price_num">{{item.priceDigital}}</view>
+						<view class="price_unit">元/{{item.unit}}</view>
+						<view class="special_price_icon" wx:if="{{item.special_price_status}}">特价</view>
+					</view>
+					<view class="item_right"></view>
+				</view>
+				<view class="item_flex">
+					<view class="item_left">
+						<view class="address">{{item.warehouse}}</view>
+					</view>
+					<view class="item_right">
+						<view class="button">立即领样</view>
+					</view>
+				</view>
+			</view>
+		</block>
+	</view>
+
+<!-- 最新上架 -->
+	<view class="item_wrap" wx:if="{{recentSKU.length>0&&tabStatus==1}}">
+		<block wx:for="{{recentSKU}}" wx:key="sku">
+			<view class="item" data-goodsid="{{item.id}}">
+				<image class="recommend" src="/images/recommend.png" wx:if="{{item.if_commend}}"></image>
+				<view class="item_flex">
+					<view class="item_left">
+						<view class="title">{{item.name}} {{item.craft}} {{item.branch}} </view>
+					</view>
+					<view class="item_right">
+						<view class="date">{{item.update_time}}</view>
+					</view>
+				</view>
+
+				<view class="item_flex">
+					<view class="item_left">
+						<view class="price_num">{{item.priceDigital}}</view>
+						<view class="price_unit">元/{{item.unit}}</view>
+						<view class="special_price_icon" wx:if="{{item.special_price_status}}">特价</view>
+					</view>
+					<view class="item_right"></view>
+				</view>
+				<view class="item_flex">
+					<view class="item_left">
+						<view class="address">{{item.warehouse}}</view>
+					</view>
+					<view class="item_right">
+						<view class="button">立即领样</view>
+					</view>
+				</view>
+			</view>
+		</block> 
+	</view>
+
+
+	<view class="void_wrap" wx:if="{{!recentSKU.length>0&&tabStatus==1}}">
+		<image src="/images/search.png"></image>
+		<p>最近没有上架新货品~</p>
+	</view>
+
+</view>
+</scroll-view>
+

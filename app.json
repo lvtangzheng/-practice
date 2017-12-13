@@ -1,0 +1,53 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/list-tab/index",
+    "pages/list/index",
+    "pages/page3/index",
+    "pages/detail/index",
+    "pages/profile/index",
+    "pages/templete1/templete1",
+    "pages/logs/logs",
+    "pages/canvas/index",
+    "pages/scrollView/index"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "black",
+    "navigationBarTextStyle": "#fff",
+    "navigationBarTitleText": "微信小程序",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "color": "#626567",
+    "selectedColor": "#2A8CE5",
+    "backgroundColor": "fff",
+    "borderStyle": "white",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "images/index.png",
+      "selectedIconPath": "images/index_focus.png"
+    }, {
+      "pagePath": "pages/list/index",
+      "text": "列表",
+      "iconPath": "images/burger.png",
+      "selectedIconPath": "images/burger_focus.png"
+    }, {
+      "pagePath": "pages/page3/index",
+      "text": "page3",
+      "iconPath": "images/discovery.png",
+      "selectedIconPath": "images/discovery_focus.png"
+    }, {
+      "pagePath": "pages/profile/index",
+      "text": "profile",
+      "iconPath": "images/ring.png",
+      "selectedIconPath": "images/ring_focus.png"
+    }]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  }
+}

@@ -1,0 +1,58 @@
+<!--index.wxml-->
+<block wx:if="{{initLoading}}">
+  <view class="page-loading">
+    <text class="weui-loading" />
+  </view>
+</block>
+
+<scroll-view scroll-y="true" class="container" bindscrolltolower="loadMoreLists" bindscrolltoupper="reloadLists">
+
+  <view>
+    <swiper class="activity" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{imgUrls}}" wx:for-index="idx" wx:key="{{idx}}">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" width="355" height="155" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <view class="list-item">
+    <view class="load-content load-more-wrap" wx:if="{{reloading}}">
+      <text class="weui-loading" />
+      <text>刷新中...</text>
+    </view>
+
+    <block wx:for="{{lists}}" wx:for-index="idx" wx:key="{{idx}}">
+      <navigator url="../detail/index?id={{item.id}}&&title={{item.title}}&&img={{item.image}}" class="row">
+        <view class="col-left">
+          <image src="{{item.image}}" class="list-avatar" />
+        </view>
+        <view class="col-right">
+          <view class="list-title-div">
+            <text class="list-title">{{item.title}}</text>
+            <view></view>
+            <text class="list-desc">{{item.desc}}</text>
+          </view>
+          <view>
+            <text class="level-label {{item.level}}">{{item.level}}</text>
+            <text class="time-label">{{item.time}}</text>
+          </view>
+        </view>
+      </navigator>
+    </block>
+  </view>
+  
+  <view class="load-more-wrap">
+    <block wx:if="{{hasMore}}">
+      <view class="load-content">
+        <text class="weui-loading" />
+      </view>
+    </block>
+    <block wx:else>
+      <view class="load-content">
+        <text>没有更多内容了</text>
+      </view>
+    </block>
+  </view>
+</scroll-view>

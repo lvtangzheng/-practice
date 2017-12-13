@@ -1,0 +1,30 @@
+page{
+    background: #fff;
+}
+@keyframes fadeIn {
+    0% { opacity: 0;  
+        transform:  rotate(0deg);}
+    100% { opacity: 1;
+        transform:  rotate(360deg); }
+}
+
+.img_list {
+    padding: 10px 0;
+    text-align: center;
+    background: #fff;
+}
+
+.img_wrap {
+    display: inline-block;
+    width: 185rpx;
+    height: 185rpx;
+}
+
+image {
+    width: 100%;
+    height: 100%;
+}
+
+.fade_in {
+    animation: fadeIn 2s both;
+}

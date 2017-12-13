@@ -1,0 +1,166 @@
+swiper{
+  width: 750rpx;
+  height: 375rpx;
+  border-top: 10px dotted orange;
+  border-bottom: 10px dotted orange;
+}
+swiper image{
+  width: 750rpx;
+  height: 375rpx;
+}
+.tab_wrap{
+  width: 750rpx;
+  display: flex;
+  background: #fff;
+  border-bottom: 1px solid #e1e1e1;
+}
+.tab_wrap .tab_item{
+  font-size: 28rpx;
+  color: #777;
+  border-top: 5rpx solid transparent;
+  border-bottom: 5rpx solid transparent;
+  line-height: 70rpx;
+  box-sizing: border-box;
+  width: 50rpx;
+  flex: 1;
+  text-align: center;
+}
+.tab_wrap .tab_item:nth-child(1){
+  margin: 0 110rpx 0 100rpx;
+}
+.tab_wrap .tab_item:nth-child(2){
+  margin: 0 100rpx 0 110rpx;
+}
+.tab_wrap .tab_item.active{
+  color: #333;
+  border-bottom: 5rpx solid #ff7670;
+}
+
+.topnav{
+  position: fixed;
+  top: 0;
+  z-index: 99;
+}
+.hide{
+  display: none;
+}
+.show{
+  display: block;
+}
+
+.header_wrap .header_box .call{
+  border-radius: 50%;
+  overflow: hidden;
+  box-sizing: border-box;
+  position: absolute;
+  right: 50rpx;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 65rpx;
+  height: 65rpx;
+}
+
+.item_wrap{
+  background: #fff;
+  width: 750rpx;
+}
+.item_wrap:last-child{
+  margin-bottom: 60rpx;
+}
+
+/*列表数据*/
+.item_wrap .item{
+  padding:30rpx;
+  border-bottom: 1px solid #e1e1e1;
+  position: relative;
+}
+.item_wrap .item .recommend{
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 65rpx;
+  height: 65rpx;
+}
+.item_flex{
+  display: flex;
+  line-height: 1;
+  position: relative;
+  margin-bottom: 20rpx;
+}
+.item_flex:last-child{
+  margin-bottom: 0;
+}
+.item_flex .item_left{
+  width: 490rpx;
+  display: flex;
+  align-items: flex-end;
+}
+.item_flex .item_right{
+  width: 200rpx;
+  text-align: right;
+}
+.item_flex .item_left .title{
+  font-size: 32rpx; 
+  color: #333;
+  line-height: 45rpx;
+}
+.item_flex .item_right .date{
+  font-size: 24rpx;
+  color: #999;
+  line-height: 45rpx;
+}
+
+.item_flex .item_left .price_num{
+  font-size: 40rpx;
+  color: #fc5a1f;
+}
+.item_flex .item_left .price_unit{
+  font-size: 28rpx;
+  color: #fc5a1f;
+}
+.item_flex .item_left .special_price_icon{
+  font-size: 24rpx;
+  color: #f43845;
+  border-radius: 6rpx;
+  background: #fff0f1;
+  padding: 4rpx;
+  border: 1px solid #fff0f1;
+  margin-left: 15rpx;
+  position:relative;
+  top:4rpx;
+}
+.item_flex .item_left .address{
+  color: #888;
+  font-size: 26rpx;
+}
+.item_flex .item_right .button{
+  text-align: center;
+  width: 150rpx;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: #ff7600;
+  border-radius: 6rpx;
+  color: #fffefe;
+  border: none;
+  font-size: 30rpx;
+  line-height: 60rpx;
+  height: 60rpx;
+}
+
+.void_wrap{
+  padding-top:175rpx;
+}
+.void_wrap image{
+  width: 118rpx;
+  height: 102rpx;
+  display: block;
+  margin: 0 auto;
+}
+.void_wrap p{
+  padding-top: 30rpx;
+  display: block;
+  text-align: center;
+  font-size: 28rpx;
+  color: #999;
+}

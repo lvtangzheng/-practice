@@ -1,0 +1,71 @@
+.container{
+  padding: 0;
+  font-size: 14rpx;
+  color: #000;
+}
+.flex-wrp{
+  height: 100px;
+  display: flex;
+  background: #fff;
+}
+.container .search{
+  width: 735rpx;
+  height: 65rpx;
+  padding: 12.5rpx 0 12.5rpx 15rpx;
+  background: #2A8CE5;
+}
+.container .search-left{
+  flex: 8;
+  background: #4EA3E7;
+  text-align: left;
+}
+.container .search-left input{
+  display: inline-block;
+  height: 65rpx;
+  font-size: 26rpx;
+}
+.search-placeholder{
+  color: #8CCEFD;
+  line-height: 20rpx;
+}
+.container .search .search-left image{
+  display: inline-block;
+  width: 35rpx;
+  height: 35rpx;
+  padding: 15rpx 15rpx 15rpx 20rpx;
+}
+.container .search .search-right{
+  flex: 1;
+}
+.container .search .search-right image{
+  width: 45rpx;
+  height: 45rpx;
+  padding: 10rpx;
+}
+
+.previewImage{
+
+}
+.previewImage .item-title{
+  color: red;
+  font-size: 36rpx;
+  text-align: center;
+  padding: 20rpx 0;
+}
+.previewImage .image-box{
+  overflow: hidden;
+}
+.previewImage .image-box view{
+  width: 300rpx;
+  height: 400rpx;
+  float: left;
+  margin: 20rpx 0;
+}
+.previewImage .image-box view:nth-child(odd){
+  margin: 20rpx 50rpx;
+}
+.previewImage .image-box image{
+  width: 300rpx;
+  height: 300rpx;
+}
+

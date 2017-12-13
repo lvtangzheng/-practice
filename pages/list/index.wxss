@@ -1,0 +1,70 @@
+.container {
+  height: 1500rpx;
+}
+.activity {
+  width: 750rpx;
+  height: 375rpx;
+}
+.activity image {
+  width: 750rpx;
+  height: 375rpx;
+}
+
+.row {
+  margin: 15rpx 10rpx 5rpx;
+  padding: 20rpx 10rpx 5rpx;
+  clear: both;
+  box-shadow: 0 3px 8px -4px rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 0.95);
+  height: 170rpx;
+}
+
+.col-left, .col-right {
+  float: left;
+  overflow: hidden;
+}
+.col-left {
+  width: 210rpx;
+}
+.col-right {
+  width: 500rpx;
+}
+.list-item .list-avatar {
+  width: 200rpx;
+  height: 150rpx;
+}
+
+.list-title-div {
+  height: 51px;
+  overflow: hidden;
+}
+.list-title {
+  font-size: 13px;
+  color: #525252;
+}
+.list-desc {
+  font-size: 13px;
+  color: #ccc;
+}
+
+.level-label {
+  color: white;
+  font-size: 13px;
+  padding: 1px 3px;
+}
+.level-label.beginner {
+  background-color: #4fe5cc;
+}
+.level-label.intermediate {
+  background-color: #e8c060;
+}
+.level-label.advanced {
+  background-color: #ea9078;
+}
+.time-label {
+  font-size: 12px;
+  color: #525252;
+  margin-top: 10px;
+  padding-right: 10px;
+  float: right;
+}

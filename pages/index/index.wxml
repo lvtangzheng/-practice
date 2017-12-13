@@ -1,0 +1,101 @@
+<view>
+	<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+		<block wx:for="{{imgUrls}}" wx:key="">
+			<swiper-item>
+				<navigator url="{{item.link}}" hover-class="navigator-hover">
+					<image src="{{item.url}}" class="slide-image" width="355" height="155"/>
+				</navigator>
+			</swiper-item>
+		</block>
+	</swiper>
+
+	<block>
+		<!--成功图标-->
+		<icon type="success" size="40" bindtap="toTemplete1"/>
+		<!--安全成功标志图标-->
+		<icon type="safe_success" size="40"/>
+		<!--提示信息图标-->
+		<icon type="info" size="40" bindtap="toScrollView"/>
+		<!--带圆的信息提示图标-->
+		<icon type="info_circle" size="40" bindtap="toCanvas"/>
+		<!--不带圆的成功图标-->
+		<icon type="success_no_circle" size="40" bindtap="toTabList"/>
+		<!--带圆的成功图标-->
+		<icon type="success_circle" size="40"/>
+		<!--警告图标-->
+		<icon type="warn" size="40"/>
+		<!--带圆的等待图标-->
+		<icon type="waiting_circle" size="40"/>
+		<!--等待图标-->
+		<icon type="waiting" size="40"/>
+		<!--下载图标-->
+		<icon type="download" size="40"/>
+		<!--取消图标-->
+		<icon type="cancel" size="40"/>
+		<!--清除图标-->
+		<icon type="clear" size="40"/>
+		<!--改变颜色的success-->
+		<icon type="success" size="40" color="orange"/>
+	</block>
+
+	<view>
+		<!--水平滚动-->
+		<scroll-view scroll-x="true" class="scrollView-x">
+			<view>tab1</view>
+			<view>tab2</view>
+			<view>tab3</view>
+			<view>tab4</view>
+			<view>tab5</view>
+		</scroll-view>
+	</view>
+
+	<view>
+		<view class="inputView" style="margin-top: 20px; ">
+			<input class="input" type="number" placeholder="请输入账号" placeholder-style="color: red" bindinput="listenerPhoneInput" />
+		</view>
+		<view class="inputView">
+			<input class="input" password="true" placeholder="请输入密码" placeholder-style="color: red" bindinput="listenerPasswordInput"/>
+		</view>
+		<button style="margin: 50rpx 100rpx;" type="primary" bindtap="listenerLogin">登录</button>
+	</view>
+
+	<view style="padding: 40rpx;" class="picker">
+		<view>普通选择器</view>
+		<!--mode默认selector range数据源value选择的index bindchange事件监听-->
+		<picker mode="selector" range="{{array}}" value="{{index}}" bindchange="listenerPickerSelected">
+			<text>{{array[index]}}</text>
+		</picker>
+
+		<view>时间选择器</view>
+		<picker mode="time" value="{{time}}" start="06:00" end="24:00" bindchange="listenerTimePickerSelected">
+			<text>{{time}}</text>
+		</picker>
+
+		<view>日期选择器</view>
+		<picker mode="date" value="{{date}}" start="2016-09-26" end="2017-10-10" bindchange="listenerDatePickerSelected">
+			<text>{{date}}</text>
+		</picker>
+		<view>地址选择器</view>
+		<view class="row-wrap" bindtap="selectCity">
+            <view class="label">选择地区</view>
+            <picker bindchange="bindPickerProvinceChange" range="{{provinces}}">
+              <view class="picker {{selProvince=='请选择'?'hui':''}}">
+                {{selProvince}}
+              </view>
+            </picker>
+            <picker bindchange="bindPickerCityChange" range="{{citys}}">
+              <view class="picker {{selCity=='请选择'?'hui':''}}">
+                {{selCity}}
+              </view>
+            </picker>
+            <picker bindchange="bindPickerChange" range="{{districts}}">
+              <view class="picker {{selDistrict=='请选择'?'hui':''}}">
+                {{selDistrict}}
+              </view>
+            </picker>
+        </view>
+	</view>
+   
+</view>
+
+

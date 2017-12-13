@@ -1,0 +1,5 @@
+<view class="detail-box">
+  <text class="detail-id">{{id}}</text>
+  <view class="detail-title">{{title}}</view>
+  <view><image class="detail-image" src="{{image}}"/></view>
+</view>
