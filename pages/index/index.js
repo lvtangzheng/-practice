@@ -192,5 +192,10 @@ Page({
     wx.navigateTo({
       url: "/pages/list-tab/index"
     })
+  },
+  toTabGif: function(){
+    wx.navigateTo({
+      url: "/pages/animate/index"
+    })
   }
 });

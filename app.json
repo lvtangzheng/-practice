@@ -1,6 +1,7 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/animate/index",
     "pages/list-tab/index",
     "pages/list/index",
     "pages/page3/index",
