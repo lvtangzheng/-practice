@@ -1,6 +1,16 @@
 <view classs="container">
+	<form bindsubmit="doSearch">
+		<view class="search-wrap">
+			<view class="search-box {{showSearchBarCancle ? '' : ' search-box2'}}">
+				<image src="/images/search@2x.png"></image>
+				<input placeholder="搜索" bindinput="bindKeyInput" placeholder-class="search-placeholder" confirm-type="search" value="{{content}}" bindconfirm="doSearch" bindfocus="bindFocus"/>
+				<button class="cancel-btn" wx:if="{{showSearchBarCancle}}" form-type="button" bindtap="clearTopSearchBar">取消</button>
+			</view>
+		</view>
+	</form>
+
 	<canvas canvas-id="myCanvas" bindtouchstart="start" bindtouchmove="move" bindtouchend="end"/>
-  <view hidden="{{hidden}}">
-    Coordinates: ({{x}}, {{y}})
-  </view>
+	<view hidden="{{hidden}}">
+		Coordinates: ({{x}}, {{y}})
+	</view>
 </view>

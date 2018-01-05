@@ -51,22 +51,6 @@ Page({
     })
   },
 
-
-  listenerButtonModal:function() {
-      this.setData({
-          hiddenModal: !this.data.hiddenModal
-      })
-  },
-  listenerConfirm:function() {
-      this.setData({
-          hiddenModal: true
-      });
-  },
-  listenerCancel:function() {
-      this.setData({
-          hiddenModal: true
-      });
-  },
   //预览图片
   previewImage: function (e) {
     var that = this;

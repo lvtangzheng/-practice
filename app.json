@@ -1,6 +1,8 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/canvas/index",
+    "pages/login/index",
     "pages/animate/index",
     "pages/list-tab/index",
     "pages/list/index",
@@ -9,7 +11,6 @@
     "pages/profile/index",
     "pages/templete1/templete1",
     "pages/logs/logs",
-    "pages/canvas/index",
     "pages/scrollView/index"
   ],
   "window": {

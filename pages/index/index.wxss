@@ -1,3 +1,31 @@
+/*搜索框*/
+.search-wrap{
+  width: 690rpx;
+  padding: 30rpx 30rpx 48rpx;
+  background:linear-gradient(#000 0% ,#3f4144 100% );
+}
+.search-box{
+  background: #fff;
+  border-radius: 30rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  position: relative;
+  color: #a7a7a7;
+}
+.search-box view{
+  text-align: center;
+}
+.search-wrap .search-box image{
+  width: 30rpx;
+  height: 30rpx;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.search-wrap .search-box text{
+  padding-left: 40rpx;
+}
+
 swiper{
   width: 750rpx;
   height: 375rpx;
@@ -12,27 +40,18 @@ swiper image{
 .scrollView-x{
   white-space: nowrap; 
   display: flex;
-  background:  purple;
+  background:  #eee;
 }
 .scrollView-x view{
   width: 200rpx; 
-  height: 50rpx; 
+  height: 50rpx;
+  line-height: 50rpx;
   display: inline-block;
   text-align: center;
-  border-right: 1px solid red;
+  border-right: 1px solid #e1e1e1;
 }
 .scrollView-x view:last-child{
   border-right: none;
-}
-
-.inputView{
-  border:  2px solid red;
-  border-radius: 5px;
-  margin: 0 100rpx;
-  margin-top: 15px;
-}
-.inputView .input{
-  padding-left: 10px;
 }
 
 .picker>picker{
@@ -47,6 +66,19 @@ swiper image{
 .row-wrap picker {
   margin-right: 20rpx;
 }
-.hui{
-  color: #777;
+
+.itemBox{
+  overflow: hidden;
+}
+.item{
+  float: left;
+  width: 25%;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  display: flex;
+}
+.item text{
+  line-height: 30rpx;
+  height: 30rpx;
 }

@@ -1,6 +1,6 @@
 {
 	"navigationBarTitleText": "首页",
-	"backgroundTextStyle": "light",
-	"navigationBarBackgroundColor": "#fefefe",
-	"navigationBarTextStyle": "black"
+	"backgroundTextStyle": "dark",
+	"navigationBarBackgroundColor": "#000000",
+	"navigationBarTextStyle": "#fefefe"
 }

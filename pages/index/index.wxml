@@ -1,4 +1,11 @@
-<view>
+<view class="container">
+	<view class="search-wrap">
+		<navigator url="/pages/canvas/index">
+			<view class="search-box">
+				<view><image src="/images/search@2x.png"></image><text>搜索</text></view>
+			</view>
+		</navigator>
+	</view>
 	<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
 		<block wx:for="{{imgUrls}}" wx:key="">
 			<swiper-item>
@@ -9,34 +16,57 @@
 		</block>
 	</swiper>
 
-	<block>
-		<!--成功图标-->
-		<icon type="success" size="40" bindtap="toTemplete1"/>
-		<!--安全成功标志图标-->
-		<icon type="safe_success" size="40"/>
-		<!--提示信息图标-->
-		<icon type="info" size="40" catchtap="toScrollView"/>
-		<!--带圆的信息提示图标-->
-		<icon type="info_circle" size="40" bindtap="toCanvas"/>
-		<!--不带圆的成功图标-->
-		<icon type="success_no_circle" size="40" bindtap="toTabList"/>
-		<!--带圆的成功图标-->
-		<icon type="success_circle" size="40" bindtap="toTabGif"/>
-		<!--警告图标-->
-		<icon type="warn" size="40"/>
-		<!--带圆的等待图标-->
-		<icon type="waiting_circle" size="40"/>
-		<!--等待图标-->
-		<icon type="waiting" size="40"/>
-		<!--下载图标-->
-		<icon type="download" size="40"/>
-		<!--取消图标-->
-		<icon type="cancel" size="40"/>
-		<!--清除图标-->
-		<icon type="clear" size="40"/>
-		<!--改变颜色的success-->
-		<icon type="success" size="40" color="orange"/>
-	</block>
+	<view class="itemBox">
+		<view class="item">
+			<icon type="waiting" size="40" bindtap="toLogin"/>
+			<text>登陆</text>
+		</view>
+		<view class="item">
+			<icon type="success" size="40" />
+			<text>多张图片加载</text>
+		</view>
+		<view class="item">
+			<icon type="info" size="40" catchtap="toScrollView"/>
+			<text>tab滚动</text>
+		</view>
+		<view class="item">
+			<icon type="info_circle" size="40" bindtap="toCanvas"/>
+			<text>canvas</text>
+		</view>
+		<view class="item">
+			<icon type="success_no_circle" size="40" bindtap="toTabList"/>
+			<text>tablist</text>
+		</view>
+		<view class="item">
+			<icon type="success_circle" size="40" bindtap="toTabGif"/>
+			<text>tabgif</text>
+		</view>
+		<view class="item">
+			<icon type="warn" size="40"/>
+			<text></text>
+		</view>
+		<view class="item">
+			<icon type="waiting_circle" size="40"/>
+			<text></text>
+		</view>
+		<view class="item">
+			<icon type="download" size="40"/>
+			<text></text>
+		</view>
+		<view class="item">
+			<icon type="cancel" size="40"/>
+			<text></text>
+		</view>
+		<view class="item">
+			<icon type="clear" size="40"/>
+			<text></text>
+		</view>
+		<view class="item">
+			<icon type="success" size="40" color="orange"/>
+			<text></text>
+		</view>
+		
+	</view>
 
 	<view>
 		<!--水平滚动-->
@@ -47,16 +77,6 @@
 			<view>tab4</view>
 			<view>tab5</view>
 		</scroll-view>
-	</view>
-
-	<view>
-		<view class="inputView" style="margin-top: 20px; ">
-			<input class="input" type="number" placeholder="请输入账号" placeholder-style="color: red" bindinput="listenerPhoneInput" />
-		</view>
-		<view class="inputView">
-			<input class="input" password="true" placeholder="请输入密码" placeholder-style="color: red" bindinput="listenerPasswordInput"/>
-		</view>
-		<button style="margin: 50rpx 100rpx;" type="primary" bindtap="listenerLogin">登录</button>
 	</view>
 
 	<view style="padding: 40rpx;" class="picker">

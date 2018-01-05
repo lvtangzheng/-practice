@@ -2,10 +2,10 @@
     <view class="search flex-wrp">
         <view class="search-left flex-item">
             <image src="../../images/search.png"></image>
-            <input placeholder="搜索话题, 问题或人" placeholder-class="search-placeholder"/>
+            <input placeholder="搜索话题, 问题或人" placeholder-class="style-placeholder"/>
         </view>
         <view class="search-right flex-item">
-            <image src="../../images/lighting.png"></image>
+            <image src="../../images/call.png"></image>
         </view>
     </view>
 
@@ -21,19 +21,9 @@
         <action-sheet-cancel>取消</action-sheet-cancel>
     </action-sheet>
 
-    <!--监听button点击事件-->
-    <button bindtap="listenerButtonModal" type="primary">弹出modal</button>
-
-    <!--弹出框-->
-    <modal title="退出应用" hidden="{{hiddenModal}}" confirm-text="再看看" cancel-text="退出" bindconfirm="listenerConfirm" bindcancel="listenerCancel" >
-        您是否真的要退出应用
-    </modal>
-
     <view class="previewImage">
         <view class="item-title">图片预览</view>
         <view class="item-title"><icon size="30" type="warn"></icon>(本地图片预览暂好像失效)</view>
-        
-
         <view class="image-box">
             <block wx:for="{{imgalist}}" wx:for-item="image" wx:key="">
                 <view>

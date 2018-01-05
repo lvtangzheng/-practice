@@ -1,6 +1,6 @@
 /**index.wxss**/
 .container{
-	padding: 200rpx 0;
+	padding: 50rpx 0;
 }
 .userinfo {
   display: flex;
@@ -20,13 +20,13 @@
 }
 
 .usermotto {
-  margin-top: 200px;
+  margin-top: 20rpx;
 }
 
 
 
 .wrapper{
-  /*height: 100%;*/
+  width: 750rpx;
   background:#fff;
 }
 .page-body-form-value{

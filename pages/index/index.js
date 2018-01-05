@@ -26,9 +26,6 @@ Page({
     interval: 3000,
     duration: 1000,
 
-    phone: '',
-    password: '',
-
     array: ['Android', 'IOS', 'ReactNativ', 'WeChat', 'Web'],
     index: 0,
     time: '18:00',
@@ -73,24 +70,7 @@ Page({
   onUnload: function() {
     console.log('index---------onUnload')
   },
-
-
-  // 监听手机号输入
-  listenerPhoneInput: function(e) {
-      this.data.phone = e.detail.value;
-  },
-  // 监听密码输入
-  listenerPasswordInput: function(e) {
-      this.data.password = e.detail.value;
-  },
-  // 监听登录按钮
-  listenerLogin: function() {
-      //打印收入账号和密码
-    console.log('手机号为: ', this.data.phone);
-    console.log('密码为: ', this.data.password);
-  },
   
-
   // 监听普通picker选择器
   listenerPickerSelected: function(e) {
       //改变index值，通过setData()方法重绘界面
@@ -172,6 +152,11 @@ Page({
         selDistrictIndex: event.detail.value
       })
     }
+  },
+  toLogin: function(){
+    wx.navigateTo({
+      url: "/pages/login/index"
+    })
   },
   toTemplete1: function(){
     wx.navigateTo({

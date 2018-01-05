@@ -12,27 +12,27 @@
   width: 735rpx;
   height: 65rpx;
   padding: 12.5rpx 0 12.5rpx 15rpx;
-  background: #2A8CE5;
+  background: #f60;
 }
 .container .search-left{
   flex: 8;
-  background: #4EA3E7;
+  background: #f90;
   text-align: left;
+  position: relative;
 }
 .container .search-left input{
-  display: inline-block;
   height: 65rpx;
+  line-height: 65rpx;
   font-size: 26rpx;
-}
-.search-placeholder{
-  color: #8CCEFD;
-  line-height: 20rpx;
+  margin-left: 50rpx;
 }
 .container .search .search-left image{
-  display: inline-block;
   width: 35rpx;
   height: 35rpx;
-  padding: 15rpx 15rpx 15rpx 20rpx;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10rpx;
 }
 .container .search .search-right{
   flex: 1;

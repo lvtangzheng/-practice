@@ -1,0 +1,27 @@
+<view class="container">
+  <view class="logo-box">
+    <image src="/images/pic1.jpg"></image>
+  </view>
+  <view class="form-box">
+
+    <form bindsubmit="doLogin">
+      <view class="row-wrap">
+        <input name="phone" type="number" placeholder="请输入注册手机号码" placeholder-class="style-placeholder" maxlength="11" data-from="phone" bindinput="bindKeyInput" value="{{mobileValue}}" />
+      </view>
+
+      <view class="row-wrap">
+        <input name="pass" minlength="6" type="password" placeholder="请输入登录密码" placeholder-class="style-placeholder" data-from="pass" bindinput="bindKeyInput" value="{{passValue}}" />
+      </view>
+
+      <button class="btn {{loginBtnStatus? '' : 'btn_disabled'}}" formType="submit" disabled="{{loginBtnStatus? '' : 'disabled'}}">登录</button>
+    </form>
+
+    <view class="forget-box">
+      <view class="forget-text">
+        <view>若您未注册账号或忘记密码,致电联系ME,</view>
+        <view>或放弃吧。</view>
+      </view>
+    </view>
+  </view>
+
+</view>

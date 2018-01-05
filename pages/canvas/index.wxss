@@ -1,3 +1,52 @@
+/*搜索框*/
+.search-wrap{
+  width: 750rpx;
+  padding-bottom: 30rpx ;
+  background: #fff;
+}
+
+.search-box{
+  width: 620rpx;
+  margin-left: 20rpx;
+  background: #f2f2f2;
+  border-radius: 30rpx;
+  height: 60rpx;
+  position: relative;
+}
+.search-box2{
+  width: 710rpx;
+  margin-left: 20rpx;
+  background: #f2f2f2;
+  border-radius: 30rpx;
+  height: 60rpx;
+  position: relative;
+}
+.search-box input{
+  height: 60rpx;
+  line-height: 60rpx;
+  padding-left: 64rpx;
+  width: 90%;
+}
+.search-wrap .search-box image{
+  width: 30rpx;
+  height: 30rpx;
+  position: absolute;
+  top: 50%;
+  left: 20rpx;
+  transform: translateY(-50%);
+}
+.search-wrap .search-box .cancel-btn{
+  color: #f90;
+  float:right;
+  position: absolute;
+  top: 0rpx;
+  right: -100rpx;
+  line-height: 1;
+  padding: 16rpx;
+  font-size: 28rpx;
+  background: #fff;
+}
+
 canvas{
   border: 1px solid;
   width: 300px;

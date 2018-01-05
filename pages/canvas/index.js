@@ -1,8 +1,11 @@
+var util = require("../../utils/util.js")
 Page({
   data: {
     x: 0,
     y: 0,
-    hidden: true
+    hidden: true,
+    content: null,
+    showSearchBarCancle: false,
   },
   onLoad: function () {
     // const ctx0 = wx.createCanvasContext("myCanvas");
@@ -51,6 +54,24 @@ Page({
   end: function (e) {
     this.setData({
       hidden: true
+    })
+  },
+
+  //搜索框输入
+  doSearch: function (e) {
+    var that = this;
+    util.showModal("逗你玩呢",e.detail.value? e.detail.value+"？没有":"输个空想搜个什么鬼",false)
+  },
+  //清除搜索框
+  clearTopSearchBar: function () {
+    this.setData({
+      content: null,
+      showSearchBarCancle: false
+    })
+  },
+  bindFocus: function (e) {
+    this.setData({
+      showSearchBarCancle: true
     })
   }
 })
