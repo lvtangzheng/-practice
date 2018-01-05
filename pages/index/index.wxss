@@ -36,24 +36,9 @@ swiper image{
   width: 750rpx;
   height: 375rpx;
 }
-
-.scrollView-x{
-  white-space: nowrap; 
-  display: flex;
-  background:  #eee;
+.picker{
+  width: 670rpx;
 }
-.scrollView-x view{
-  width: 200rpx; 
-  height: 50rpx;
-  line-height: 50rpx;
-  display: inline-block;
-  text-align: center;
-  border-right: 1px solid #e1e1e1;
-}
-.scrollView-x view:last-child{
-  border-right: none;
-}
-
 .picker>picker{
 	border: 1px solid #000;
 }
