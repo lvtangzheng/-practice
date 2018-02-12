@@ -1,0 +1,86 @@
+.list-box{
+    background: #fff;
+    border-bottom: 1px solid #e1e1e1;
+    width: 750rpx;  
+    margin: 0 auto;  
+    /*padding: 40rpx 0; */
+}
+.list-box .items .item{
+    display: flex;
+    border-bottom: 1px solid #e1e1e1;
+    padding: 25rpx 0;
+    margin: 0 25rpx;
+    position: relative;
+    height: 80rpx; 
+}
+.list-box .items .item:last-child{
+    border-bottom: none;
+}
+.list-box .items .head-img{
+    width: 82rpx;
+    height: 82rpx;
+    border-radius: 50%;
+    margin-right: 20rpx;
+}
+.list-box .items .item-content{
+    width: 560rpx;
+}
+.list-box .items .item-content .name{
+    font-size: 28rpx;
+    color: #333;
+    line-height: 42rpx;
+    height:42rpx;
+}
+.list-box .items .item-content .company{
+    font-size: 26rpx;
+    color: #888;
+    line-height: 40rpx;
+    height:40rpx;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+.list-box .items .call-img{
+    width: 40rpx;
+    height: 46rpx;
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    right: 0;
+}
+
+.inner{  
+    position: absolute;  
+    top:0;
+    bottom: 0;
+    width: 100%;
+}  
+.inner.txt{  
+    background-color: #fff;  
+    width: 100%;  
+    z-index: 5;  
+    padding:0 10rpx;  
+    transition: left 0.2s ease-in-out;  
+    white-space:nowrap;  
+    overflow:hidden;  
+    text-overflow:ellipsis; 
+    display: flex;
+    align-items: center; 
+    box-sizing: border-box;
+}  
+.inner.del{  
+    background: #ff7600;  
+    width: 120rpx;
+    text-align: center;  
+    z-index: 4;
+    color: #fff;
+    right: 0rpx;
+    top:0;
+    bottom: 0;
+    font-size: 30rpx;
+    padding: 30rpx;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    line-height: 40rpx;
+}   

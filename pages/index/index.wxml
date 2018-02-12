@@ -42,12 +42,12 @@
 			<text>tabgif</text>
 		</view>
 		<view class="item">
-			<icon type="warn" size="40"/>
-			<text></text>
+			<icon type="warn" size="40" bindtap="toScrolldelete"/>
+			<text>scrollDelete</text>
 		</view>
 		<view class="item">
-			<icon type="waiting_circle" size="40"/>
-			<text></text>
+			<icon type="waiting_circle" size="40" bindtap="toTimeCustome"/>
+			<text>时间日期自定义</text>
 		</view>
 		<view class="item">
 			<icon type="download" size="40"/>

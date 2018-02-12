@@ -55,6 +55,10 @@ swiper image{
 .itemBox{
   overflow: hidden;
 }
+.itemBox:before{
+  font-family: 3500
+}
+
 .item{
   float: left;
   width: 25%;

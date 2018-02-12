@@ -1,0 +1,16 @@
+<view class="list-box">
+	<view class="items">
+		<view class="item" wx:for="{{list}}" wx:for-item="item" catchtap="toDetail" wx:key="{{index}}">
+		  <view bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" data-index="{{index}}" style="{{item.txtStyle}}" class="inner txt">
+		    <image src="{{item.icon}}" class="head-img"></image>
+		    <!-- <view class="item-content" bindtap="00" id="{{card.id}}"> -->
+		    <view class="item-content" id="{{item.id}}">
+		      <view class="name">{{item.txt}}</view>
+		      <view class="company">{{item.txt}}</view>
+		    </view>
+		    <image src="/images/call.png" class="call-img" bindtap="makePhoneCall" data-mobile="{{item.mobile}}"></image>
+		  </view>
+		  <view class="inner del" data-index="{{index}}" bindtap="delItem">取消收藏</view>
+		</view>
+	</view>
+</view>

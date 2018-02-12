@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "滑动删除",
+	"backgroundTextStyle": "light",
+	"navigationBarBackgroundColor": "#fefefe",
+	"navigationBarTextStyle": "black",
+	"enablePullDownRefresh": true
+}

@@ -1,16 +1,18 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/picker/index",
     "pages/canvas/index",
     "pages/login/index",
     "pages/animate/index",
-    "pages/list-tab/index",
     "pages/list/index",
     "pages/page3/index",
     "pages/detail/index",
     "pages/profile/index",
     "pages/templete1/templete1",
     "pages/logs/logs",
+    "pages/list-tab/index",
+    "pages/scrollDelete/index",
     "pages/scrollView/index"
   ],
   "window": {

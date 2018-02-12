@@ -182,5 +182,15 @@ Page({
     wx.navigateTo({
       url: "/pages/animate/index"
     })
+  },
+  toScrolldelete: function(){
+    wx.navigateTo({
+      url: "/pages/scrollDelete/index"
+    })
+  },
+  toTimeCustome:function(){
+    wx.navigateTo({
+      url: "/pages/picker/index"
+    })
   }
 });
