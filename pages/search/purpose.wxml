@@ -1,0 +1,9 @@
+<view class="container">
+  <view class="item-wrap">
+    <view class="item itemSet {{selectedPurpose=='不限'?'active':''}}" data-purpose="不限" bindtap="toSelectItem">不限</view>
+    <view class="item-title">纱线用途</view>
+    <view class="item-box" wx:for="{{purposeData}}" wx:key="key">
+      <view class="item {{selectedPurpose==item?'active':''}}" data-purpose="{{item}}" bindtap="toSelectItem">{{item}}</view>
+    </view>
+  </view>
+</view>

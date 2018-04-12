@@ -1,0 +1,37 @@
+<view class="container">
+  <form bindsubmit="doSearch">
+    <view class="item itemFlex1" bindtap="changePurposeOptions">
+      <view class="itemTitle">用途</view>
+      <view class="labelRight {{selectedPurpose!=='不限'?'active':''}}" name="purpose">{{selectedPurpose}}</view>
+    </view>
+    <!-- <view class="item itemFlex2">
+      <view class="itemTitle">强力</view>
+      <view class="inputBox">
+        <input name="qiangli_floor" type="number" placeholder="最低值" value="{{searchParams.qing}}" placeholder-class="style-placeholder" class="inputSet" maxlength="8" />
+        <view class="divideLine"></view>
+        <input name="qiangli_ceil" type="number" placeholder="最高值" value="{{qiangliCeilPointer}}" placeholder-class="style-placeholder" class="inputSet" maxlength="8" />
+      </view>
+    </view> -->
+
+    <view class="item itemFlex2">
+      <view class="itemTitle">可漂性</view>
+      <view class="item-box">
+        <view class="item-child {{selectedKepiao==item?'active':''}}" wx:for="{{kepiaoData}}" wx:key="key" data-value="{{item}}" bindtap="changeKepiaoOptions">{{item}}</view>
+      </view>
+
+      <view class="itemTitle itemTitleSet">可染性</view>
+      <view class="item-box">
+        <view class="item-child {{selectedKeran==item?'active':''}}" wx:for="{{keranData}}" wx:key="key" data-value="{{item}}" bindtap="changeKeranOptions">{{item}}</view>
+      </view>
+    </view>
+
+    <view class="item itemFlex1 mt_15" bindtap="changeWarehouseOptions">
+      <view class="itemTitle">存货地</view>
+      <view class="labelRight {{selectedWarehouse!=='不限'?'active':''}}">{{selectedWarehouse}}</view>
+    </view>
+    <view class="footer">
+      <button class="btn btnReset" bindtap="resetConditions">重置</button>
+      <button class="btn btnComplete" formType="submit">确定</button>
+    </view>
+  </form>
+</view>

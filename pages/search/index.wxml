@@ -1,0 +1,141 @@
+<view class="container">
+  <view class="topFix">
+      <form bindsubmit="doSearch">
+      <view class="search-wrap">
+        <view class="search-box {{showSearchBarCancle ? 'search-box2' : ''}}">
+          <image src="/images/search/search@2x.png"></image>
+          <input placeholder="输入品名/工艺/支数/存货地" bindinput="inputKeywords" placeholder-class="search-placeholder" confirm-type="search" value="{{content}}" bindconfirm="doSearch" bindfocus="bindFocus" />
+          <button class="search-btn" form-type="submit" wx:if="{{showSearchBarCancle}}" bindconfirm="doSearch">搜索</button>
+          <button class="search-btn search-btn2" form-type="submit" wx:else bindconfirm="doSearch">搜索</button>
+        </view>
+      </view>
+    </form>
+
+    <view class="content-wrap">
+      <view class="flex-item {{searchParams.industryName && searchParams.industryName!='不限品类' ?'active':''}}" bindtap="industryTapShow">
+        <text>{{searchParams.industryName?searchParams.industryName:'不限品类'}}</text>
+        <image src="/images/search/light_on.png" wx:if="{{searchParams.industryName!='不限品类'}}"></image>
+        <image src="/images/search/light_off.png" wx:else></image>
+      </view>
+      <view class="flex-item {{searchParams.craft&&searchParams.craft!='不限工艺'? 'active':''}}" bindtap="craftTapShow">
+        <text>{{searchParams.craft?searchParams.craft:'不限工艺'}}</text>
+        <image src="/images/search/light_on.png" wx:if="{{searchParams.craft!=='不限工艺'}}"></image>
+        <image src="/images/search/light_off.png" wx:else></image>
+      </view>
+      <view class="flex-item {{hideBranch?'':'active'}} {{searchParams.branch&&searchParams.branch!='不限规格'? 'active':''}}" bindtap="branchTapShow">
+        <text>{{searchParams.branch?searchParams.branch:'不限规格'}}</text>
+        <image src="/images/search/light_on2.png" wx:if="{{!hideBranch}}"></image>
+        <image src="/images/search/light_on.png" wx:elif="{{searchParams.branch!=='不限规格'}}"></image>
+        <image src="/images/search/light_off.png" wx:else></image>
+      </view>
+      <view class="flex-item" bindtap="moreTapShow">
+        <text>筛选</text>
+        <image class="imgset" src="/images/search/light_off2.png"></image>
+      </view>
+    </view>
+  </view>
+
+  <view class="modalContent" hidden="{{hideBranch}}">
+    <view class="modalBg">
+      <view class="modal-mask" bindtap="closeModal" bindtouchstart="handletouch"></view>
+      <view class="modal">
+        <view class="all {{searchParams.branch=='不限规格'?'craftActive':''}}" bindtap='setDefaultBranch'>不限</view>
+        <view class="modal-footer">
+          <form bindsubmit="customBranchTap">
+            <view class="wrapSet">
+              <view class="modalTitle">自定义规格
+                <text>(单位:S或D)</text>
+              </view>
+
+              <view class="item-input">
+                <input type="number" name="commonBranch" value="{{searchParams.branchType==0?searchParams.branchValue:''}}" maxlength="3" bindinput="setCustomBranch" data-branchtype="0" />
+                <view>S</view>
+              </view>
+              <view class="item-input">
+                <input type="number" name="fiberBranch" value="{{searchParams.branchType==1?searchParams.branchValue:''}}" maxlength="3" bindinput="setCustomBranch" data-branchtype="1" />
+                <view>D</view>
+              </view>
+            </view>
+
+            <button class="btnSure" formType="submit">确定</button>
+          </form>
+        </view>
+        <view class="arr-up" bindtap="closeModal">
+          <image src="/images/arrow_up.png" />
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 主营货品 -->
+  <view class="item_wrap">
+    <block wx:for="{{allSKU}}" wx:key="sku">
+      <view class="item" bindtap="bindGoodsDetailTap" data-goodsid="{{item.id}}" data-companyid="{{item.company_id}}">
+        <image class="recommend" src="/images/recommend.png" wx:if="{{item.if_commend}}"></image>
+        <view class="item_flex" style="margin-bottom: 12rpx;">
+          <view class="item_left">
+            <text class="sku_label" wx:if="{{item.weight!=='0吨'}}">现</text>
+            <text class="sku_label sku_label2" wx:else>定</text>
+            <text class="title">{{item.name}} {{item.craft}} {{item.branch}} </text>
+          </view>
+          <view class="item_right">
+            <view class="date">{{item.modified_time}}</view>
+          </view>
+        </view>
+
+        <view class="item_flex" style="margin-bottom: 0;">
+          <view class="item_left" style="width: 100%">
+            <view class="desc">
+              <view class="desc_item" wx:for="{{item.subTipArr}}" wx:for-item="attr" wx:key="attrId">{{attr}}</view>
+            </view>
+          </view>
+        </view>
+
+        <view class="item_flex">
+          <view class="item_left" wx:if="{{item.is_price_hide==1}}">
+            <view class="price_box">
+              <view class="price_num2">价格面议</view>
+            </view>
+          </view>
+          <view class="item_left" wx:else>
+            <view class="price_box">
+              <block wx:if="{{item.special_price_status==1 && item.specialPrice > 0}}">
+                <view class="price_num">{{item.specialPrice}}</view>
+                <view class="price_unit">元/{{item.unit}}</view>
+              </block>
+              <block wx:else>
+                <view class="price_num">{{item.priceDigital>0?item.priceDigital:'价格面议'}}</view>
+                <view class="price_unit" wx:if="{{item.priceDigital>0}}">元/{{item.unit}}</view>
+              </block>
+
+            </view>
+            <view class="special_price_icon" wx:if="{{item.special_price_status==1 && item.specialPrice>0}}">特价</view>
+          </view>
+          <view class="item_right"></view>
+        </view>
+        <view class="item_flex">
+          <view class="item_left">
+            <view class="address">{{item.warehouse}}</view>
+          </view>
+          <view class="item_right">
+            <view class="button">查看详情</view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <!--搜索结果为空  -->
+  <view class="void_wrap" wx:if="{{allSKU.length==0}}">
+    <image src="/images/empty/search_no.png"></image>
+    <view class="warnMsg_30">没找到合适的货源</view>
+    <view class="warnMsg_26">联系找纱小秘报价</view>
+    <view class="call callSet" bindtap="makeServiceTel">联系找纱小秘</view>
+  </view>
+
+  <!--搜索结果不为空，显示在搜索结果末尾  -->
+  <view class="end_warn" wx:else>
+    <view class="warnMsg_26">没找到合适的货源</view>
+    <view class="call" bindtap="makeServiceTel">联系找纱小秘</view>
+  </view>
+</view>

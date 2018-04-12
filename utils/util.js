@@ -25,22 +25,54 @@ function checkMobile(mobile) {
   }
 }
 // wx.showModal()组件
-function showModal(title,msg,showCancel){
+function showModal(title,msg,showCancel,color){
   wx.showModal({
-    title: title,
+    title: title || "提示",
     content: msg,
-    showCancel: showCancel,
-    confirmColor: "#1aa2f6",
+    showCancel: showCancel || false,
+    confirmColor: color || "#1aa2f6",
     success: function (res) {
     }
   })
 }
 
-
+/**
+ * 获取微信小程序上一次历史记录
+ */
+function getPrevPage() {
+  var prevPage;
+  var pages = getCurrentPages();
+  var pagesLength = pages.length;
+  if (pagesLength >= 2) {
+    prevPage = pages[pagesLength - 2];
+  }
+  return prevPage;
+}
+/**
+ * 重置搜索条件参数
+ */
+function setDefaultSearchParams() {
+  var searchParams = {
+    q: null,
+    page: 0,
+    branch: null,
+    craft: null,
+    kepiao: null,
+    keran: null,
+    purpose: null,
+    warehouse: null,
+    area_id: 0,
+    industry_id: 0,
+    version: 49,
+  };
+  return searchParams;
+}
 
 module.exports = {
   formatTime: formatTime,
   checkMobile: checkMobile,
-  showModal: showModal
+  showModal: showModal,
+  getPrevPage: getPrevPage,
+  setDefaultSearchParams: setDefaultSearchParams
 }
 

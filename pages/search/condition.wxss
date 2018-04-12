@@ -1,0 +1,123 @@
+.container{
+	height: 100%;
+	border-top: 1px solid #eee;
+	width: 100%;
+	flex-direction: column;
+}
+form{
+	width: 750rpx;
+}
+.item{
+	font-size: 30rpx;
+	padding: 34rpx 30rpx;
+	line-height: 1;
+	background: #fff;
+	border-bottom: 1px solid #eee;
+}
+.itemFlex1{
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+}
+.itemFlex1 .labelRight{
+	color: #999;
+	margin-right: 25rpx;
+}
+.itemFlex1 .labelRight.active{
+	color: #ff7600;
+}
+.itemFlex1 .labelRight:after{
+	content: '';
+	width: 16rpx;
+	height: 22rpx;
+	position: absolute;
+	top: 50%;
+	right: 30rpx;
+	transform: translateY(-50%);
+	background: url(https://www.zhaosha.com/Topic/WX/buyer/arrow_r2.png) no-repeat;
+	background-size: 100% 100%;
+}
+.itemFlex1 input{
+	display: none;
+}
+.mt_15{
+	margin-top: 15rpx;
+}
+.itemFlex2 .itemTitle{
+	padding-bottom: 30rpx;
+}
+.itemFlex2 .itemTitleSet{
+	padding-top: 50rpx;
+}
+
+.item-child{
+	border-radius: 6rpx;
+	display: inline-block; 
+	width: 150rpx;
+	box-sizing: border-box;
+	font-size: 28rpx;
+	text-align: center;
+	background: #fff;
+	color: #555;
+	border: 1px solid #d0d0d0;
+	padding: 15rpx 0;
+	line-height: 1;
+}
+
+.item .item-child:nth-of-type(2){
+ 	margin: 0 30rpx;
+}
+.item .item-child.active{
+	border: 1px solid #ff7600;
+	background: #fef7f1;
+	color: #ff7600;
+}
+.item .inputBox{
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+	line-height: 1;
+}
+.item .inputSet{
+	border-radius: 6rpx;
+	height: 58rpx;
+	line-height: 58rpx;
+	width: 270rpx;
+	background: #f3f3f5;
+	font-size:28rpx;
+	text-align: center;
+	color: #ff7600;
+}
+.item .divideLine{
+	display: inline-block;
+	width: 40rpx;
+	height: 1px;
+	background: #333;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.footer{
+	font-size: 32rpx;
+	width: 750rpx;
+	height: 100rpx;
+ 	line-height:100rpx;
+	display: flex;
+	text-align: center;
+	position: fixed;
+	bottom: 0;
+  	border-top: 1px solid #eee;
+}
+.footer .btn{
+	width: 100%;
+}
+.footer .btnReset{
+	color: #666;
+	background: #fff;
+}
+.footer .btnComplete{
+	color: #fff;
+	background: #ff7600;
+}
+

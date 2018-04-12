@@ -25,6 +25,7 @@ Page({
     autoplay: true,
     interval: 3000,
     duration: 1000,
+    circular: true,
 
     array: ['Android', 'IOS', 'ReactNativ', 'WeChat', 'Web'],
     index: 0,
@@ -191,6 +192,11 @@ Page({
   toTimeCustome:function(){
     wx.navigateTo({
       url: "/pages/picker/index"
+    })
+  },
+  toSearch: function(){
+    wx.navigateTo({
+      url: "/pages/search/index"
     })
   }
 });

@@ -1,0 +1,58 @@
+page{
+  background: #fff;
+}
+.container {
+  font-size: 30rpx;
+  flex-direction: row;
+}
+.main{
+  width: 750rpx;
+  border-top: 1px solid #eee;
+  position: relative;
+}
+.nav_left {
+  width: 240rpx;
+  height: 100%;
+  text-align: center;
+  position: fixed;
+  background: #f0f6f7;
+}
+.nav_left .nav_left_items {
+  color: #666;
+  height: 120rpx;
+  line-height: 120rpx;
+  font-size: 14px;
+}
+.nav_left .nav_left_items.active {
+  color: #ff7600;
+  background: #fff;
+}
+
+.nav_right {
+  margin-left: 240rpx;
+  min-height: 100%;
+  text-indent: 56rpx;
+  background: #fff;
+  box-sizing: border-box;
+}
+.nav_right .item{
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.nav_right .item.active{
+  color: #ff7600;
+}
+.nav_right .label{
+  font-size: 28rpx;
+  color: #999;
+  background: #f0f6f7;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+
+.nav_right .empty{
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: left;
+  color: #444;
+}

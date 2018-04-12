@@ -13,7 +13,13 @@
     "pages/logs/logs",
     "pages/list-tab/index",
     "pages/scrollDelete/index",
-    "pages/scrollView/index"
+    "pages/scrollView/index",
+    "pages/search/index",
+    "pages/search/condition",
+    "pages/search/craft",
+    "pages/search/industry",
+    "pages/search/purpose",
+    "pages/search/warehouse"
   ],
   "window": {
     "navigationBarBackgroundColor": "black",
@@ -25,29 +31,29 @@
   },
   "tabBar": {
     "color": "#626567",
-    "selectedColor": "#2A8CE5",
+    "selectedColor": "#f60",
     "backgroundColor": "fff",
     "borderStyle": "white",
     "list": [{
       "pagePath": "pages/index/index",
       "text": "首页",
-      "iconPath": "images/index.png",
-      "selectedIconPath": "images/index_focus.png"
+      "iconPath": "images/nav/home-off.png",
+      "selectedIconPath": "images/nav/home-on.png"
     }, {
       "pagePath": "pages/list/index",
       "text": "列表",
-      "iconPath": "images/burger.png",
-      "selectedIconPath": "images/burger_focus.png"
+      "iconPath": "images/nav/store-off.png",
+      "selectedIconPath": "images/nav/store-on.png"
     }, {
       "pagePath": "pages/page3/index",
       "text": "page3",
-      "iconPath": "images/discovery.png",
-      "selectedIconPath": "images/discovery_focus.png"
+      "iconPath": "images/nav/instro-off.png",
+      "selectedIconPath": "images/nav/instro-on.png"
     }, {
       "pagePath": "pages/profile/index",
       "text": "profile",
-      "iconPath": "images/ring.png",
-      "selectedIconPath": "images/ring_focus.png"
+      "iconPath": "images/nav/profile-off.png",
+      "selectedIconPath": "images/nav/profile-on.png"
     }]
   },
   "networkTimeout": {

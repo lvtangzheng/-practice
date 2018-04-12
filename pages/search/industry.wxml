@@ -1,0 +1,23 @@
+<view class="container">
+  <view class="main">
+    <view class="nav_left">
+      <block wx:for="{{industryCategory}}" wx:key="industryId">
+        <view class="nav_left_items {{index == selectedIndustryLevel2Index? 'active' : '' }}" bindtap="changedIndustryLevel2" data-index="{{index}}" data-id="{{item.id}}" data-industryname="{{item.name}}">{{item.name}}</view>
+      </block>
+    </view>
+    <view class="nav_right">
+      <view wx:if="{{industryCategory[selectedIndustryLevel2Index].child}}">
+        <view class="item {{selectedIndustryLevel3==0? 'active': ''}}" data-id="{{industryCategory[selectedIndustryLevel2Index].id}}" data-industryname="不限品类" bindtap="changedIndustryLevel3">不限</view>
+        <block wx:for="{{industryCategory[selectedIndustryLevel2Index].child}}" wx:key="level2Id" wx:for-item="level2">
+          <view class="nav_right_items">
+            <view class="itemWrap">
+              <view class="label">{{level2.name}}</view>
+              <view class="item {{selectedIndustryLevel3==level3.id? 'active': ''}}" wx:for="{{level2.child}}" wx:key="level3Id" wx:for-item="level3" bindtap="changedIndustryLevel3" data-id="{{level3.id}}" data-industryname="{{level3.name}}">{{level3.name}}</view>
+            </view>
+          </view>
+        </block>
+      </view>
+      <view wx:else class="empty">暂无数据</view>
+    </view>
+  </view>
+</view>

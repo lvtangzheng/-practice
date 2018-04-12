@@ -6,7 +6,7 @@
 			</view>
 		</navigator>
 	</view>
-	<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+	<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" interval="{{interval}}" duration="{{duration}}">
 		<block wx:for="{{imgUrls}}" wx:key="">
 			<swiper-item>
 				<navigator url="{{item.link}}" hover-class="navigator-hover">
@@ -49,9 +49,9 @@
 			<icon type="waiting_circle" size="40" bindtap="toTimeCustome"/>
 			<text>时间日期自定义</text>
 		</view>
-		<view class="item">
+		<view class="item" bindtap="toSearch">
 			<icon type="download" size="40"/>
-			<text></text>
+			<text>条件搜索</text>
 		</view>
 		<view class="item">
 			<icon type="cancel" size="40"/>

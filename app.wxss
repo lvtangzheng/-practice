@@ -19,6 +19,9 @@ page{
 .hui{
 	color: #777;
 }
+button{
+	border-radius: 0;
+}
 button:after{
 	display: none;
 }

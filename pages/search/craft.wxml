@@ -1,0 +1,9 @@
+<view class="container">
+  <view class="item-wrap">
+    <view class="item itemSet {{selectedCraft=='不限工艺'?'active':''}}" data-craft="不限工艺" bindtap="toSelectItem">不限</view>
+    <view class="item-title">成纱工艺</view>
+    <view class="item-box" wx:for-items="{{craftData}}" wx:key="key">
+      <view class="item {{selectedCraft==item?'active':''}}" data-craft="{{item}}" bindtap="toSelectItem">{{item}}</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,22 @@
+<view class="container">
+  <!--全国范围内  -->
+  <view class="item-wrap">
+    <view class="item-box">
+      <view class="item {{selectedAreaID==0?'active':''}}" data-id="0" data-cityname="不限" bindtap="selectCity">全国范围</view>
+    </view>
+  </view>
+  <view class="item-wrap">
+
+    <!--热门城市  -->
+    <view class="item-title">热门城市</view>
+    <view class="item-box">
+      <view class="item {{selectedAreaID==item.key?'active':''}}" wx:for-items="{{hotCity}}" wx:key="item.key" data-id="{{item.key}}" data-cityname="{{item.value}}" bindtap="selectCity">{{item.value}}</view>
+    </view>
+
+    <!--全部城市  -->
+    <view class="item-box2" wx:for="{{allCity}}" wx:key="cityGroupIndex" wx:for-item="cityGroup">
+      <view class="item-title">{{cityGroup.prefix}}</view>
+      <view wx:for="{{cityGroup.children}}" wx:for-item="city" wx:key="cityIndex" class="item2 {{selectedAreaID==city.id?'active':''}}" data-id="{{city.id}}" data-cityname="{{city.name}}" bindtap="selectCity">{{city.name}}</view>
+    </view>
+  </view>
+</view>
