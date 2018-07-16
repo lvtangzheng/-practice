@@ -6,7 +6,8 @@
 			</view>
 		</navigator>
 	</view>
-	<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" interval="{{interval}}" duration="{{duration}}">
+
+	<swiper class="adBox" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" interval="{{interval}}" duration="{{duration}}">
 		<block wx:for="{{imgUrls}}" wx:key="">
 			<swiper-item>
 				<navigator url="{{item.link}}" hover-class="navigator-hover">
@@ -15,6 +16,27 @@
 			</swiper-item>
 		</block>
 	</swiper>
+
+	<view class="swiper-container">
+		<swiper class="swiper_box-list" bindchange="swiperIndustryChange" autoplay="{{autoplay}}" circular="{{circular}}" interval="{{interval2}}" duration="{{duration}}">
+			<block wx:for="{{industryCategoryData}}" wx:key="industryCategoryListId">
+				<swiper-item>
+					<view class="row">
+						<block wx:for="{{item}}" wx:key="industryListId">
+							<view class="col-item" bindtap="bindIndustryTap" id="{{item.id}}" data-industryname="{{item.name}}">
+								<image src="/images/goodslist/{{item.icon}}.png"></image>
+							</view>
+						</block>
+					</view>
+				</swiper-item>
+			</block>
+		</swiper>
+		<view class="dots">
+			<block wx:for="{{industryCategoryData}}" wx:key="unique">
+				<view class="dot{{index == swiperIndustryCurrent ? ' active' : ''}}"></view>
+			</block>
+		</view>
+	</view>
 
 	<view class="itemBox">
 		<view class="item">

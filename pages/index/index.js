@@ -1,8 +1,11 @@
 var commonCityData = require('../../utils/city.js');
+var tradesJS = require('../../utils/trades.js');
 
 var app = getApp()
 Page({
   data: {
+    industryCategoryData: {},
+    swiperIndustryCurrent: 0,
     imgUrls: [
       {
         link: "/pages/logs/logs",
@@ -24,6 +27,7 @@ Page({
     indicatorDots: true,
     autoplay: true,
     interval: 3000,
+    interval2: 10000,
     duration: 1000,
     circular: true,
 
@@ -54,6 +58,7 @@ Page({
       })
     });
     this.initCityData(1);
+    tradesJS.initIndustryData(that);
   },
   // 监听页面显示 当从当前页面调转到另一个页面 另一个页面销毁时会再次执行
   onShow: function() {
@@ -120,8 +125,12 @@ Page({
       this.setData({
         districts:pinkArray
       });
-    }
-    
+    } 
+  },
+  swiperIndustryChange: function (e) {
+    this.setData({
+      swiperIndustryCurrent: e.detail.current
+    })
   },
   bindPickerProvinceChange:function(event){
     var selIterm = commonCityData.cityData[event.detail.value];
