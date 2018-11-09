@@ -76,8 +76,8 @@
 			<text>条件搜索</text>
 		</view>
 		<view class="item">
-			<icon type="cancel" size="40"/>
-			<text></text>
+			<icon type="cancel" size="40" bindtap="toCustomOpt"/>
+			<text>展开收回</text>
 		</view>
 		<view class="item">
 			<icon type="clear" size="40"/>

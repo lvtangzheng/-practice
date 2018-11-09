@@ -1,0 +1,7 @@
+<view class="container">
+	<view class="list-box">
+		<text-overflow wx:for="{{list_data}}" wx:key="" text="{{item.txt}}" bind:action='exFun' data-id="{{item.id}}"></text-overflow>
+	</view>
+
+	<modal modal-hidden="{{is_modal_Hidden}}" modal-msg="{{is_modal_Msg}}" bind:action='doSure'/>
+</view>

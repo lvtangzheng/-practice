@@ -1,0 +1,42 @@
+text-overflow .list-item {
+  font-size: 28rpx;
+  color: #666;
+  border: 1px solid #eee;
+  border-radius: 6rpx;
+  margin-bottom: 20rpx;
+  background: #fff;
+}
+text-overflow:last-of-type .list-item{
+	margin-bottom: 0;
+}
+.motto-text {
+  margin: 20rpx;
+  line-height: 1.5;
+}
+.show-all-true {
+
+}
+.show-all-false {
+  word-break: break-all;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  display: -webkit-box;
+}
+.two-height {
+  position: fixed;
+  font-size: 28rpx;
+  line-height: 1.5;
+  top: -100px;
+  left: 0;
+  color: white;
+}
+.show-more-btn {
+  background: #2294fb;
+  color: #fff;
+  height: 60rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

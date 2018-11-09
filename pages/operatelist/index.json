@@ -1,0 +1,8 @@
+{
+	"navigationBarTitleText": "展开收回",
+	"navigationBarBackgroundColor": "#000000",
+	"usingComponents": {
+	    "text-overflow": "/component/component-text-overflow/index",
+		"modal": "/component/component-modal/modal"
+  	}
+}

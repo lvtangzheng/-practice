@@ -207,5 +207,10 @@ Page({
     wx.navigateTo({
       url: "/pages/search/index"
     })
+  },
+  toCustomOpt: function(){
+    wx.navigateTo({
+      url: "/pages/operatelist/index"
+    })
   }
 });

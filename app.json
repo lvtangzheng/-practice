@@ -1,5 +1,5 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
     "pages/picker/index",
     "pages/canvas/index",
@@ -19,7 +19,9 @@
     "pages/search/craft",
     "pages/search/industry",
     "pages/search/purpose",
-    "pages/search/warehouse"
+    "pages/search/warehouse",
+    "pages/operatelist/index",
+    "component/component-modal/modal"
   ],
   "window": {
     "navigationBarBackgroundColor": "black",
@@ -34,27 +36,32 @@
     "selectedColor": "#f60",
     "backgroundColor": "fff",
     "borderStyle": "white",
-    "list": [{
-      "pagePath": "pages/index/index",
-      "text": "首页",
-      "iconPath": "images/nav/home-off.png",
-      "selectedIconPath": "images/nav/home-on.png"
-    }, {
-      "pagePath": "pages/list/index",
-      "text": "列表",
-      "iconPath": "images/nav/store-off.png",
-      "selectedIconPath": "images/nav/store-on.png"
-    }, {
-      "pagePath": "pages/page3/index",
-      "text": "page3",
-      "iconPath": "images/nav/instro-off.png",
-      "selectedIconPath": "images/nav/instro-on.png"
-    }, {
-      "pagePath": "pages/profile/index",
-      "text": "profile",
-      "iconPath": "images/nav/profile-off.png",
-      "selectedIconPath": "images/nav/profile-on.png"
-    }]
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/nav/home-off.png",
+        "selectedIconPath": "images/nav/home-on.png"
+      },
+      {
+        "pagePath": "pages/list/index",
+        "text": "列表",
+        "iconPath": "images/nav/store-off.png",
+        "selectedIconPath": "images/nav/store-on.png"
+      },
+      {
+        "pagePath": "pages/page3/index",
+        "text": "page3",
+        "iconPath": "images/nav/instro-off.png",
+        "selectedIconPath": "images/nav/instro-on.png"
+      },
+      {
+        "pagePath": "pages/profile/index",
+        "text": "profile",
+        "iconPath": "images/nav/profile-off.png",
+        "selectedIconPath": "images/nav/profile-on.png"
+      }
+    ]
   },
   "networkTimeout": {
     "request": 10000,

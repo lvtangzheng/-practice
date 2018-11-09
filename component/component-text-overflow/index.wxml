@@ -1,0 +1,4 @@
+<view class="list-item" catchtap="doItemEvent">
+  <view class="motto-text {{moreBtn ? 'show-all-' + show : ''}}">{{text}}</view>
+  <view class="show-more-btn" hidden="{{!moreBtn}}" catchtap="toggleHandler">{{show ? '收起' : '展开'}}</view>
+</view>
