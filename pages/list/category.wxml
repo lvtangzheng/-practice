@@ -1,0 +1,25 @@
+<view class="container">
+	<view class="cate-nav">
+		<scroll-view scroll-x="true" class="cate-nav-body">
+			<view wx:for="{{navList}}" class="item {{id==item.id?'active':''}}" data-id="{{item.id}}" bindtap="switchCate" wx:key="{{item.id}}">
+				<view class="name">{{item.name}}</view>
+			</view>
+		</scroll-view>
+	</view>
+	<view class="cate-item">
+		<view class="h">
+			<view class="desc">{{currentCategory.front_name}}</view>
+		</view>
+		<view class="b" wx:if="{{goodsList.length>0}}">
+			<navigator url="/pages/detail/goodsdetail?id={{item.id}}" class="item" wx:for="{{goodsList}}" wx:for-item="item" wx:key="{{item.id}}">
+				<image class="img" src="{{item.list_pic_url}}" background-size="cover"></image>
+				<view class="name">{{item.name}}</view>
+				<view class="price">¥{{item.retail_price}}</view>
+			</navigator>
+		</view>
+		<view class="void_wrap" wx:else>
+			<image src="/images/empty/goods_empty.png"></image>
+			<view class="txt">暂无数据</view>
+		</view>
+	</view>
+</view>

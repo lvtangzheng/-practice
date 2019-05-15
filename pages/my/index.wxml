@@ -1,0 +1,36 @@
+<view class="container">
+	<block wx:if="{{userRawInfo.nickName}}">
+		<view class="profile-info" bindtap="goLogin">
+			<image class="avatar" src="{{userInfo.avatar}}"></image>
+			<view class="info">
+				<view class="name">{{userInfo.nickname}}</view>
+				<view class="level">{{userInfo.username}}</view>
+			</view>
+		</view>
+	</block>
+	<block wx:else>
+		<button class="profile-info" open-type='getUserInfo' bindgetuserinfo="getUserInfo">
+			<image class="avatar" src="{{userInfo.avatar}}"></image>
+			<view class="info">
+				<view class="name">{{userInfo.nickname}}</view>
+				<view class="level">{{userInfo.username}}</view>
+			</view>
+		</button>
+	</block>
+
+	<view class="user-menu" >
+		<navigator class="item" url="{{item.to_url}}" wx:for="{{navItem}}" wx:key="{{item.id}}">
+			<image src="{{item.img_url}}"></image>
+			<text class="txt">{{item.txt}}</text>
+		</navigator>
+		<block wx:if="{{navItem.length%3 == 1}}">
+			<view class="item"></view>
+			<view class="item"></view>
+		</block>
+		<block wx:if="{{navItem.length%3 == 2}}">
+			<view class="item"></view>
+		</block>
+	</view>
+
+  <view class="logout" bindtap="exitLogin">退出登录</view>
+</view>

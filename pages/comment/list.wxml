@@ -1,0 +1,31 @@
+<view class="container">
+	<view class="comments">
+		<view class="h">
+			<view class="item {{ showType == 0 ? 'active' : ''}}" bindtap="switchTab">全部({{allCount}})</view>
+			<view class="item {{ showType == 0 ? '' : 'active'}}" bindtap="switchTab">有图({{hasPicCount}})</view>
+		</view>
+		<view class="b">
+			<view class="item" wx:for="{{comments}}" wx:key="{{item.id}}">
+				<view class="info">
+					<view class="user">
+						<image src="{{item.user_info.avatar?item.user_info.avatar:'/images/search@2x.png'}}"></image>
+						<text>{{item.user_info.nickname?item.user_info.nickname:'游客'}}{{index+1}}</text>
+					</view>
+					<view class="time">{{item.add_time}}</view>
+				</view>
+				<view class="content">{{item.content}}</view>
+				<view class="imgs" wx:if="{{item.pic_list.length > 0}}">
+					<image class="img" wx:for="{{item.pic_list}}" wx:key="{{pitem.id}}" wx:for-item="pitem" src="{{pitem.pic_url}}"></image>
+				</view>
+				<!-- <view class="spec">白色 2件</view> -->
+
+				<!-- <view class="customer-service" wx:if="{{item.commentReplyVO}}"> -->
+				<view class="customer-service">
+					<text class="u">小选回复：</text>
+					<text class="c">{{item.commentReplyVO.replyContent}}评论</text>
+				</view>
+			</view>
+
+		</view>
+	</view>
+</view>

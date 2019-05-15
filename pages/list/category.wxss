@@ -1,0 +1,81 @@
+.cate-nav{
+    position: fixed;
+    left:0;
+    top:0;
+    z-index: 9;
+}
+.cate-nav-body{
+    height: 84rpx;
+    white-space: nowrap;   
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    width: 750rpx;
+}
+.cate-nav .item{
+    display: inline-block;
+    height: 84rpx;
+    min-width: 130rpx;
+    padding: 0 15rpx;
+}
+.cate-nav .item .name{
+    height: 84rpx;
+    padding: 0 20rpx;
+    line-height: 84rpx;
+    color: #333;
+    font-size: 30rpx;
+}
+.cate-nav .item.active .name{
+    color: #ab2b2b;
+    border-bottom: 2px solid #ab2b2b;
+}
+
+.cate-item{
+    margin-top: 90rpx;
+}
+.cate-item .h{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30rpx 0;
+    font-size: 24rpx;
+    color: #999;
+    width: 750rpx;
+}
+
+.cate-item .b{
+	width: 750rpx;
+	padding: 0 4rpx;
+	display: flex;
+	flex-wrap: wrap;
+}
+.cate-item .b .item{
+	background: #fff;
+	width: 369rpx;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 2rpx 0;
+}
+.cate-item .b .item:nth-child(2n-1){
+    margin-right: 4rpx;
+}
+.cate-item .item .img{
+	width: 300rpx;
+	height: 300rpx;
+}
+.cate-item .item .name{
+	width: 100%;
+	padding: 0 30rpx;
+	text-align: center;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	font-size: 30rpx;
+	color: #333;
+}
+.cate-item .item .price{
+	font-size: 30rpx;
+	color: #b4282d;
+	padding: 15rpx 0;
+}

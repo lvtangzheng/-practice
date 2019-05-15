@@ -1,0 +1,77 @@
+/* components/dialog.wxss */
+.wx_mask{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,.3);
+  z-index: 9;
+}
+.wx_dialog{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 80%;
+  max-width: 600rpx;
+  font-size: 28rpx;
+  background: #fff;
+  text-align: center;
+  border-radius: 10rpx;
+  z-index: 99;
+  overflow: hidden;
+}
+.wx_dialog .wx_dialog_title{
+  font-size: 36rpx;
+  padding: 30rpx 30rpx 15rpx;
+}
+.wx_dialog .wx_dialog_content{
+  padding: 15rpx 30rpx 30rpx;
+  font-size: 32rpx;
+  color: #999;
+  line-height: 1.5;
+}
+.wx_dialog .wx_dialog_footer{
+  display: flex;
+  align-items: center;
+  font-size: 34rpx;
+  height: 80rpx;
+  position: relative;
+}
+.wx_dialog .wx_dialog_footer:before{
+  content: '';
+  width: 100%;
+  background: #eee;
+  height: 1px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: scaleY(.5);
+}
+
+.wx_dialog .wx_dialog_footer .wx_dialog_btn{
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.wx_dialog .wx_dialog_footer .wx_dialog_btn:after{
+  content: '';
+  width: 1px;
+  background: #eee;
+  height: 50rpx;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%) scaleX(.5);
+}
+.wx_dialog .wx_dialog_footer .wx_dialog_btn:last-child:after{
+  display: none;
+}
+.wx_dialog_btn_confirm{
+  color: #fff;
+  background: #1786fb;
+}

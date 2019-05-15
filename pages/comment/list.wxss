@@ -1,0 +1,92 @@
+.comments{
+    width: 100%;
+    background: #fff;
+}
+.comments .h{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 9;
+    display: flex;
+    justify-content: space-around;
+    height: 85rpx;
+    border-bottom: 1px solid #eee;
+    background: #fff;
+}
+.comments .h .item{
+    width: 170rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 85rpx;
+    color: #333;
+    font-size: 30rpx;
+    border-bottom: 4rpx solid transparent;
+}
+.comments .h .item.active{
+    color: #ab2b2b;
+    border-bottom: 4rpx solid #ab2b2b;
+}
+.comments .b{
+    padding: 0 30rpx;
+    margin-top: 85rpx;
+}
+.comments .b .item{
+    border-bottom: 1px solid #eee;
+}
+.comments .b .item:last-child{
+    border-bottom: none;
+}
+.comments .info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20rpx 0;
+}
+.comments .user{
+    display: flex;
+    align-items: center;    
+}
+.comments .user image{
+    width: 65rpx;
+    height: 65rpx;
+    margin-right: 10rpx;
+    border-radius: 50%;
+    border: 1px solid #eee;
+}
+.comments .time{
+    font-size: 26rpx;
+}
+.comments .content{
+    line-height: 46rpx;
+    margin-bottom: 20rpx;
+}
+.comments .imgs{
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 20rpx;
+}
+.comments .imgs .img{
+    height: 150rpx;
+    width: 150rpx;
+    margin-right: 20rpx;
+}
+.comments .spec{
+    font-size: 24rpx;
+    color: #999;
+    margin-bottom: 20rpx;
+}
+.comments .customer-service{
+    background: rgba(0,0,0,.03);
+    padding: 20rpx;
+    margin-bottom: 20rpx;
+    font-size: 24rpx;
+    line-height: 38rpx;
+}
+.comments .customer-service .u{
+    color: #333;
+}
+.comments .customer-service .c{
+    color: #999;
+}

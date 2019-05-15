@@ -1,0 +1,38 @@
+.collect-list{
+	width: 750rpx;
+	background: #fff;
+	padding: 0 30rpx;
+}
+.item{
+	display: flex;
+	align-items: center;
+	background: #fff;
+	border-bottom: 1px solid #eee;
+	padding: 20rpx 0;
+}
+.item:last-child{
+	border-bottom: none;
+}
+.item .img{
+	width: 130rpx;
+	height: 130rpx;
+	margin-right: 20rpx;
+}
+.item .info{
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.item .info .name{
+  color: #333;
+}
+.item .info .subtitle{
+  font-size: 24rpx;
+  color: #888;
+  line-height: 36rpx;
+  padding: 20rpx 0;
+}
+.item .info .price{
+  color: #f60;
+}
